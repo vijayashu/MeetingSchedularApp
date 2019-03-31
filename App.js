@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{Component} from 'react';
 import { StyleSheet, Text, View,TouchableOpacity,AppRegistry } from 'react-native';
 import DateTimePicker from 'react-native-modal-datetime-picker';
 import moment from 'moment';
@@ -36,7 +36,7 @@ export default class App extends React.Component {
             {this.state.chosenDate}
         </Text>
         <TouchableOpacity style={styles.button} onPress={this.showPicker}>
-          <Text>Select Date and TIme</Text>
+          <Text style={ styles.text }>Select Date and TIme</Text>
         </TouchableOpacity>
         <DateTimePicker
           isVisible={this.state.isVisible}
