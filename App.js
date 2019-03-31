@@ -32,7 +32,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Text>Welcome to the meeting schedular app!</Text>
-        <Text style={{ color:'red, fontSize:20,'}}>
+        <Text style= {{ color:'green', fontSize:20,}}>
             {this.state.chosenDate}
         </Text>
         <TouchableOpacity style={styles.button} onPress={this.showPicker}>
