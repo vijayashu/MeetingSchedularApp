@@ -6,43 +6,23 @@ class List extends Component {
       names: [
          {
             id: 0,
-            agenda: 'Hackathon Update',
-            venue: 'Sariska',
-            date:'2/4/2019',
+            name: 'Sariska',
             time:'1:00-1:30',
+            slot:'12:00-12:30',
+            slot1:'01:00-01:30',
+            slot2:'04:00-06:00',
          },
          {
             id: 1,
-            agenda: '1 on 1 with manager',
-            venue: 'Godavari',
-            date:'2/4/2019',
-            time:'4:00-4:30'
-         },
-         {
-            id: 2,
-            agenda: 'APG Tech Weekly',
-            venue: 'Gateway',
-            date:'4/4/2019',
-            time:'1:00-1:30'
-         },
-         {
-            id: 3,
-            agenda: 'Fireside chat with Jody',
-            venue: 'Sariska',
-            date:'5/4/2019',
-            time:'1:00-2:00'
-         },
-         {
-            id: 4,
-            agenda: 'Hack updates',
-            venue: 'Gateway',
-            date:'10/4/2019',
-            time:'2:30-3:00'
+            name: 'Gateway',
+            slot:'12:00-01:00',
+            slot1:'02:00-02:30',
+            slot2:'05:00-06:00',
          }
       ]
    }
    alertItemName = (item) => {
-      var details="Agenda : "+item.agenda+"\n\n Date : "+item.date+"\n\n Time : "+item.time+"\n\n Venue : "+item.venue
+      var details="Room Name : "+item.name+"\n\n Free Slot : "+item.slot+"\n\n Free Slot : "+item.slot1+"\n\n Free Slot : "+item.slot2
       alert(details)
    }
    render() {
@@ -55,8 +35,7 @@ class List extends Component {
                      style = {styles.container}
                      onPress = {() => this.alertItemName(item)}>
                      <Text style = {styles.text}>
-                        {item.agenda}
-                        {'       '+item.date}
+                        {item.name}
                      </Text>
                   </TouchableOpacity>
                ))
