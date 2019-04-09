@@ -16,7 +16,7 @@ export default class LoginScreen extends React.Component {
   }
   
   static navigationOptions = {
-    title: 'Login',
+    title: 'Login'
   };
 
   state = {
@@ -50,10 +50,11 @@ export default class LoginScreen extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.textContainer}>
-          <Text style={styles.text}>BlackRock Meeting Scheduler</Text>
+          <Text style={styles.text}>BlackRock</Text>
           <TextInput 
             style={styles.textInput}
             placeholder="Email Id"
+            placeholderTextAlign = 'center'
             onChangeText={(text) => this.setState({email: text})}
             value={this.state.email}
           />
@@ -63,10 +64,12 @@ export default class LoginScreen extends React.Component {
             value={this.state.password}
             paddingTop= {10}
             placeholder="Password"
+            secureTextEntry
           />
 
           <TouchableOpacity
             style={{marginTop: '5%'}}
+            style={styles.button}
             onPress={() => this.signIn()}
           >
             <View>
@@ -77,10 +80,11 @@ export default class LoginScreen extends React.Component {
 
           <TouchableOpacity
             style={{marginTop: '5%'}}
+            style={styles.button1}
             onPress={() => this.createUser()}
           >
             <View>
-              <Text>Create New User</Text>
+              <Text>Sign Up</Text>
             </View>
           </TouchableOpacity>
         </View>
@@ -92,25 +96,52 @@ export default class LoginScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'black',
   },
   textContainer: {
     flex: 1,
     alignItems: 'center',
     marginHorizontal: 50,
-    paddingTop: '50%',
+    paddingTop: '30%',
   },
   textInput: {
-    fontSize: 17,
-    lineHeight: 24,
-    width: '75%',
+    backgroundColor: "white",
+    padding: 15,
+    margin: 20,
+    justifyContent: "center",
+    //alignItems: "center",
+    borderRadius: 40,
+    borderColor: "rgba(0, 0, 0, 0.1)",
+    width:250
   },
+  button: {
+    backgroundColor: "white",
+    padding: 10,
+    margin: 20,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 100,
+    borderColor: "rgba(0, 0, 0, 0.1)",
+    width:100
+  },
+  
+  button1: {
+    backgroundColor: "white",
+    padding: 10,
+    margin: 20,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 100,
+    borderColor: "rgba(0, 0, 0, 0.1)",
+    width:100
+  },
+
   text: {
-    fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
-    lineHeight: 24,
-    width: '75%',
-    marginBottom: '10%',
+    fontSize: 60,
+    color: 'white',
+    fontWeight:'bold',
+    width: '100%',
+    //marginBottom: '1%',
     textAlign: 'center',
   },
 });
