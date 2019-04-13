@@ -71,4 +71,4 @@ textInput: {
   lineHeight: 24,
   width: '75%',
 },
-})
+}) 

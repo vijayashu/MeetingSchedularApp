@@ -13,8 +13,6 @@ export default class DateTimePickerTester extends Component {
  
   _hideDateTimePicker1 = () => this.setState({ isDateTimePickerVisible1: false });
 
-  _hideDateTimePicker2 = () => this.setState({ isDateTimePickerVisible2: false });
-
   _showDateTimePicker2 = () => this.setState({ isDateTimePickerVisible2: true });
 
   _showDateTimePicker3 = () => this.setState({ isDateTimePickerVisible3: true });
@@ -22,11 +20,6 @@ export default class DateTimePickerTester extends Component {
   _handleDatePicked = (date) => {
     console.log('A date has been picked: ', date);
     this._hideDateTimePicker1();
-  };
-
-  _handleDatePicked1 = (date) => {
-    console.log('A date has been picked: ', date);
-    this._hideDateTimePicker2();
   };
   
   render () {
@@ -69,8 +62,8 @@ export default class DateTimePickerTester extends Component {
         </TouchableOpacity>
         <DateTimePicker style={styles.text}
           isVisible={this.state.isDateTimePickerVisible2}
-          onConfirm={this._handleDatePicked1}
-          onCancel={this._hideDateTimePicker2}
+          onConfirm={this._handleDatePicked}
+          onCancel={this._hideDateTimePicker1}
           mode='time'
         />
 

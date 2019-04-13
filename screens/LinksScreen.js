@@ -6,7 +6,7 @@ import DateElement from './DateElement'
 import Users from './Users'
 export default class LinksScreen extends React.Component {
   static navigationOptions = {
-    title: 'Scheduler',
+    title: 'Schedular',
   };
   constructor(props){
     super(props)
@@ -34,11 +34,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginHorizontal: 50,
     paddingTop: '50%',
-  },
-  textInput: {
-    fontSize: 17,
-    lineHeight: 15,
-    width: '75%',
   },
   text: {
     fontSize: 17,
