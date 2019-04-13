@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, StyleSheet,View,Button } from 'react-native';
+import { ScrollView, StyleSheet,View,Button,TextInput } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import Rooms from './Rooms'
 import DateElement from './DateElement'
@@ -18,7 +18,7 @@ export default class LinksScreen extends React.Component {
     <View style={styles.container}>
       <DateElement></DateElement>
       <Users></Users>
-      <Rooms></Rooms>
+<Rooms></Rooms>      
     </View>
     );
   }
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   },
   textInput: {
     fontSize: 17,
-    lineHeight: 24,
+    lineHeight: 15,
     width: '75%',
   },
   text: {

@@ -1,6 +1,6 @@
 // import component
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { View,StyleSheet,TextInput } from 'react-native';
 import MultiSelect from 'react-native-multiple-select';
 
 export default class Users extends Component {
@@ -56,7 +56,19 @@ export default class Users extends Component {
           submitButtonColor="#CCC"
           submitButtonText="Invite"
         />
+        <TextInput  
+         style={styles.textInput}
+         placeholder="Agenda"
+         placeholderTextAlign = 'center'/>
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+textInput: {
+  fontSize: 23,
+  lineHeight: 24,
+  width: '75%',
+},
+})

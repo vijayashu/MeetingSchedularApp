@@ -71,10 +71,10 @@ const styles = StyleSheet.create ({
    container: {
       padding: 10,
       marginTop: 30,
-      backgroundColor: '#d9f9b1',
+      backgroundColor: 'black',
       alignItems: 'center',
    },
    text: {
-      color: '#4f603c'
+      color: 'white'
    }
 })

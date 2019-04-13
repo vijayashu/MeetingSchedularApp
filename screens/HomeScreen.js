@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
   },
   tabBarInfoText: {
     fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
+    color: 'black',
     textAlign: 'center',
   },
   navigationFilename: {
