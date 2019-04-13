@@ -7,18 +7,31 @@ class List extends Component {
          {
             id: 0,
             name: 'Sariska',
-            time:'1:00-1:30',
             slot:'12:00-12:30',
-            slot1:'01:00-01:30',
-            slot2:'04:00-06:00',
+            slot1:'13:00-13:30',
+            slot2:'16:00-18:00',
          },
          {
             id: 1,
             name: 'Gateway',
-            slot:'12:00-01:00',
-            slot1:'02:00-02:30',
+            slot:'12:00-13:00',
+            slot1:'14:00-14:30',
             slot2:'05:00-06:00',
-         }
+         },
+         {
+            id: 2,
+            name: 'Ellora',
+            slot:'16:00-16:30',
+            slot1:'19:00-20:30',
+            slot2:'21:00-22:00',
+         },
+         {
+            id: 3,
+            name: 'Godavri',
+            slot:'09:00-10:30',
+            slot1:'13:00-14:30',
+            slot2:'18:00-19:00',
+         },
       ]
    }
    alertItemName = (item) => {
@@ -49,11 +62,11 @@ export default List
 const styles = StyleSheet.create ({
    container: {
       padding: 10,
-      marginTop: 30,
-      backgroundColor: '#d9f9b1',
+      marginTop: 10,
+      backgroundColor: 'black',
       alignItems: 'center',
    },
    text: {
-      color: '#4f603c'
+      color: 'white'
    }
 })

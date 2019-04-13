@@ -8,35 +8,35 @@ class List extends Component {
             id: 0,
             agenda: 'Hackathon Update',
             venue: 'Sariska',
-            date:'2/4/2019',
+            date:'16/4/2019',
             time:'1:00-1:30',
          },
          {
             id: 1,
             agenda: '1 on 1 with manager',
             venue: 'Godavari',
-            date:'2/4/2019',
+            date:'16/4/2019',
             time:'4:00-4:30'
          },
          {
             id: 2,
             agenda: 'APG Tech Weekly',
             venue: 'Gateway',
-            date:'4/4/2019',
+            date:'20/4/2019',
             time:'1:00-1:30'
          },
          {
             id: 3,
             agenda: 'Fireside chat with Jody',
             venue: 'Sariska',
-            date:'5/4/2019',
+            date:'25/4/2019',
             time:'1:00-2:00'
          },
          {
             id: 4,
             agenda: 'Hack updates',
             venue: 'Gateway',
-            date:'10/4/2019',
+            date:'30/4/2019',
             time:'2:30-3:00'
          }
       ]

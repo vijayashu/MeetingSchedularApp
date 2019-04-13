@@ -1,6 +1,6 @@
 import React from 'react';
-import { ScrollView, StyleSheet,View,Button,TextInput } from 'react-native';
-import { ExpoLinksView } from '@expo/samples';
+import { ScrollView, StyleSheet,View,Button,TextInput,TouchableOpacity,Text,Alert } from 'react-native';
+import AllRooms from './AllRooms'
 import Rooms from './Rooms'
 import DateElement from './DateElement'
 import Users from './Users'
@@ -18,7 +18,15 @@ export default class LinksScreen extends React.Component {
     <View style={styles.container}>
       <DateElement></DateElement>
       <Users></Users>
-<Rooms></Rooms>      
+
+      <TouchableOpacity onPress={() => {
+    Alert.alert('Meeting created succesfully');
+  }}>
+      <View style={styles.button1}>
+          <Text style={ styles.text }>Create Meeting</Text>
+          </View>
+        </TouchableOpacity>
+      <Rooms></Rooms>
     </View>
     );
   }
@@ -36,11 +44,21 @@ const styles = StyleSheet.create({
     paddingTop: '50%',
   },
   text: {
-    fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
-    lineHeight: 24,
-    width: '75%',
-    marginBottom: '10%',
-    textAlign: 'center',
+    color: 'white',
+    fontWeight:'bold',
+    fontSize:15,
+    marginVertical: 10,
+    marginHorizontal: 10,
+    alignItems: 'center'
+  },
+  button1: {
+    backgroundColor: "black",
+    padding: 5,
+    margin: 10,
+    justifyContent: "center",
+    //alignItems: "center",
+    borderRadius: 100,
+    borderColor: "rgba(0, 0, 0, 0.1)",
+    width:200
   },
 });

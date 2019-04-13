@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { View,StyleSheet,TextInput } from 'react-native';
 import MultiSelect from 'react-native-multiple-select';
-
+import { Dropdown } from 'react-native-material-dropdown';
 export default class Users extends Component {
 
   state = {
@@ -32,6 +32,15 @@ export default class Users extends Component {
   
   render() {
     var { selectedItems } = this.state.selectedItems;
+    let data = [{
+      value: 'Sariska',
+    }, {
+      value: 'Gateway',
+    }, {
+      value: 'Ellora',
+    },{
+        value: 'Godavari',
+      }];
     return (
       <View style={{ flex: 1 }}>
         <MultiSelect
@@ -56,10 +65,17 @@ export default class Users extends Component {
           submitButtonColor="#CCC"
           submitButtonText="Invite"
         />
+        <Dropdown
+        label='Select your room'
+        data={data}
+        />
         <TextInput  
          style={styles.textInput}
          placeholder="Agenda"
-         placeholderTextAlign = 'center'/>
+         placeholderTextAlign = 'center'
+         selectionColor="#428AF8"
+         underlineColorAndroid= "#428AF8"
+         />
       </View>
     );
   }
@@ -70,5 +86,7 @@ textInput: {
   fontSize: 23,
   lineHeight: 24,
   width: '75%',
+  padding: 10,
+  marginTop: 10
 },
 }) 
