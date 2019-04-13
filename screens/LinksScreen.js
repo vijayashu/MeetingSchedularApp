@@ -6,7 +6,7 @@ import DateElement from './DateElement'
 import Users from './Users'
 export default class LinksScreen extends React.Component {
   static navigationOptions = {
-    title: 'Links',
+    title: 'Scheduler',
   };
   constructor(props){
     super(props)
